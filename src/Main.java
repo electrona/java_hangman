@@ -26,6 +26,6 @@ public class Main {
 
         WordBank wordBank = new WordBank(wordList);
         String word = wordBank.getRandomWord(wordList);
-        System.out.println(word);
+        System.out.println(word.toUpperCase());
     }
 }
