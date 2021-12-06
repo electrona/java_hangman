@@ -24,7 +24,7 @@ public class DrawHangman {
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|        ");
-			System.out.println("  | |___________________________ |        ");
+			System.out.println("  | |____________________________|        ");
 		}
 
 
@@ -49,7 +49,7 @@ public class DrawHangman {
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|        ");
-			System.out.println("  | |___________________________ |        ");
+			System.out.println("  | |____________________________|        ");
 		}
 
 
@@ -74,7 +74,7 @@ public class DrawHangman {
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|        ");
-			System.out.println("  | |___________________________ |        ");
+			System.out.println("  | |____________________________|        ");
 		}
 
 		if (count == 4) {
@@ -98,7 +98,7 @@ public class DrawHangman {
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|        ");
-			System.out.println("  | |___________________________ |        ");
+			System.out.println("  | |____________________________|        ");
 		}
 
 
@@ -123,7 +123,7 @@ public class DrawHangman {
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|        ");
-			System.out.println("  | |___________________________ |        ");
+			System.out.println("  | |____________________________|        ");
 		}
 
 
@@ -148,7 +148,7 @@ public class DrawHangman {
 			System.out.println("  | |_________````_______________|   ");
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|        ");
-			System.out.println("  | |___________________________ |        ");
+			System.out.println("  | |____________________________|        ");
 		}
 
 		if (count == 7) {
@@ -172,7 +172,7 @@ public class DrawHangman {
 			System.out.println("  | |_______| ````  ````  /______|   ");
 			System.out.println("  | |_______|             /______|   ");
 			System.out.println("  | |________|__________/________|        ");
-			System.out.println("  | |___________________________ |        ");
+			System.out.println("  | |____________________________|        ");
 			System.out.println(" The word was plus ADD WORD HERE LATER");
 
 
