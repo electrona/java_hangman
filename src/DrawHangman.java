@@ -145,7 +145,7 @@ public class DrawHangman {
 			System.out.println("  | |          | |                      ");
 			System.out.println("  | |          | |                        ");
 			System.out.println("  | |_________{  |_______________                   ");
-			System.out.println("  | |_________````  _____________|   ");
+			System.out.println("  | |_________````_______________|   ");
 			System.out.println("  | |____________________________|   ");
 			System.out.println("  | |____________________________|        ");
 			System.out.println("  | |___________________________ |        ");
