@@ -35,7 +35,7 @@ public class DrawHangman {
 			System.out.println("  | |/ /     ||          ");
 			System.out.println("  | | /      ||                  ");
 			System.out.println("  | |/       || ,#####,                     ");
-			System.out.println("  | |        |/  X  X  |                     ");
+			System.out.println("  | |        |/  0  0  |                     ");
 			System.out.println("  | |        ||    >    |             ");
 			System.out.println("  | |         \\,__o__,/            ");
 			System.out.println("  | |                           ");
@@ -60,7 +60,7 @@ public class DrawHangman {
 			System.out.println("  | |/ /     ||          ");
 			System.out.println("  | | /      ||                  ");
 			System.out.println("  | |/       || ,#####,                     ");
-			System.out.println("  | |        |/  X  X  |                     ");
+			System.out.println("  | |        |/  0  0  |                     ");
 			System.out.println("  | |        ||    >    |             ");
 			System.out.println("  | |         \\,__o__,/            ");
 			System.out.println("  | |          --|  |--             ");
@@ -84,7 +84,7 @@ public class DrawHangman {
 			System.out.println("  | |/ /     ||          ");
 			System.out.println("  | | /      ||                  ");
 			System.out.println("  | |/       || ,#####,                     ");
-			System.out.println("  | |        |/  X  X  |                     ");
+			System.out.println("  | |        |/  0  0  |                     ");
 			System.out.println("  | |        ||    >    |             ");
 			System.out.println("  | |         \\,__o__,/            ");
 			System.out.println("  | |      ||----|  |--            ");
@@ -109,7 +109,7 @@ public class DrawHangman {
 			System.out.println("  | |/ /     ||          ");
 			System.out.println("  | | /      ||                  ");
 			System.out.println("  | |/       || ,#####,                     ");
-			System.out.println("  | |        |/  X  X  |                     ");
+			System.out.println("  | |        |/  0  0  |                     ");
 			System.out.println("  | |        ||    >    |             ");
 			System.out.println("  | |         \\,__o__,/            ");
 			System.out.println("  | |      ||----|  |----||            ");
@@ -134,7 +134,7 @@ public class DrawHangman {
 			System.out.println("  | |/ /     ||          ");
 			System.out.println("  | | /      ||                  ");
 			System.out.println("  | |/       || ,#####,                     ");
-			System.out.println("  | |        |/  X  X  |                     ");
+			System.out.println("  | |        |/  0  0  |                     ");
 			System.out.println("  | |        ||    >    |             ");
 			System.out.println("  | |         \\,__o__,/            ");
 			System.out.println("  | |      ||----|  |----||            ");
