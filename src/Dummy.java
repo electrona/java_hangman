@@ -54,10 +54,7 @@ public class Dummy {
 
 
         }
-            //System.out.println();//have to add a check for "_" to end loop
     }
-
-
 }
 
 
