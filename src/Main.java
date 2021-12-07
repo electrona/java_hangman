@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -26,18 +27,13 @@ public class Main {
 
         WordBank wordBank = new WordBank(wordList);
         String word = wordBank.getRandomWord(wordList);
-        word = word.toUpperCase();
+        word = word.toLowerCase();
 
-
-        //new
         DrawHangman draw = new DrawHangman();
-        String str = "banana";                           //change "word" to rnd word from WordBank
-        char[] array = str.toCharArray();
+        char[] array = word.toCharArray();
 
         char[] completedWord = new char[array.length];
-        for (int j = 0; j < completedWord.length; j++) {
-            completedWord[j] = '_';
-        }
+        Arrays.fill(completedWord, '_');
         System.out.println(completedWord);
         int lives = 7;
         int counter;
@@ -63,8 +59,7 @@ public class Main {
                 }
             }
 
-            for (int h = 0; h < (completedWord.length); h++)
-                System.out.print(completedWord[h]);
+            for (char c : completedWord) System.out.print(c);
             System.out.println();
 
             for (int r = 0; r < array.length; r++) {            // checking if theres any blanks left
