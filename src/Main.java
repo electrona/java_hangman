@@ -34,7 +34,7 @@ public class Main {
 =======
         //new
         DrawHangman draw = new DrawHangman();
-        String str = "banana";                           //change "word" to rnd word from WordBank
+        String str = word;                           //change "word" to rnd word from WordBank
         char[] array = str.toCharArray();
         //System.out.print(array.length);
         char[] remainingLetters = str.toCharArray();
@@ -45,6 +45,7 @@ public class Main {
         }
         System.out.println(completedWord);
         int lives = 7;
+<<<<<<< Updated upstream
         int counter = 0;
         int addedLetters = 0;
         Scanner kybd = new Scanner(System.in);
@@ -52,6 +53,14 @@ public class Main {
             System.out.println("Please enter your guess");
             char guess = kybd.next().charAt(0);
             //System.out.println(completedWord);
+=======
+        int counter;
+        int addedLetters;
+        //Scanner kybd = new Scanner(System.in);
+        for (int k = 0; k < 100; k++) {                          //change to while loop
+            System.out.println("Please enter your guess");
+            char guess = sc.next().charAt(0);
+>>>>>>> Stashed changes
             addedLetters = 0;
             counter = 0;
             for (int i = 0; i <= (array.length - 1); i++) {
