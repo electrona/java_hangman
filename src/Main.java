@@ -13,7 +13,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please choose easy, medium, or hard (e/m/h): ");
         String response = sc.nextLine();
-        if (Objects.equals(response, "e")) {
+        if (Objects.equals(response, "e")) {                  //add validation to the choice
             System.out.println("Easy list chosen.");
             wordList = easyList;
         } else if (Objects.equals(response, "m")) {
@@ -26,56 +26,64 @@ public class Main {
 
         WordBank wordBank = new WordBank(wordList);
         String word = wordBank.getRandomWord(wordList);
-        word = word.toUpperCase();
+        word = word.toLowerCase();                               //changed to .toLowerCase for ease of testing
 
-
+        //Send below code into Game?
+        //link above code into WordBank
         //new
         DrawHangman draw = new DrawHangman();
-        String str = "banana";                           //change "word" to rnd word from WordBank
-        char[] array = str.toCharArray();
+        String wordToBeGuessed = word;                           //changed variable names to more accurate names
+        char[] arrayOfWord = wordToBeGuessed.toCharArray();
 
-        char[] completedWord = new char[array.length];
+        char[] completedWord = new char[arrayOfWord.length];
         for (int j = 0; j < completedWord.length; j++) {
             completedWord[j] = '_';
         }
+        System.out.println("The word is " + completedWord.length + " letters long");
         System.out.println(completedWord);
+        System.out.println();
         int lives = 7;
         int counter;
         int addedLetters;
-        Scanner kybd = new Scanner(System.in);
         for (int k = 0; k < 100; k++) {                          //change to while loop
-            System.out.println("Please enter your guess");
-            char guess = kybd.next().charAt(0);
+            System.out.println("Please enter your guess: ");
+            char guess = sc.next().charAt(0);
             addedLetters = 0;
             counter = 0;
-            for (int i = 0; i <= (array.length - 1); i++) {
-                if (array[i] == guess) {                         // checks if guess is correct
+            for (int i = 0; i <= (arrayOfWord.length - 1); i++) {
+                if (arrayOfWord[i] == guess) {                         // checks if guess is correct
                     completedWord[i] = guess;
                     addedLetters = addedLetters + 1;
                 }
             }
             if (addedLetters == 0) {
+                System.out.println();
                 draw.drawHangman(lives);
                 lives--;
                 if (lives == 0) {
-                    System.out.println(array);
+                    System.out.println();
+                    System.out.print("The word was: " );
+                    for (int w = 0; w < arrayOfWord.length; w++)
+                        System.out.print(arrayOfWord[w]);
+                    System.out.println();
                     break;
                 }
             }
-
+            System.out.println();
             for (int h = 0; h < (completedWord.length); h++)
                 System.out.print(completedWord[h]);
             System.out.println();
 
-            for (int r = 0; r < array.length; r++) {            // checking if theres any blanks left
+            for (int r = 0; r < arrayOfWord.length; r++) {            // checking if theres any blanks left
                 if (completedWord[r] != '_') {
                     counter++;
                 }
             }
-            if (counter == array.length) {
+            if (counter == arrayOfWord.length) {
                 System.out.println("You Win!!");
                 break;
             }
+            System.out.println();
         }
     }
 }
