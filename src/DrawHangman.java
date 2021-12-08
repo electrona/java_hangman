@@ -1,5 +1,4 @@
 public class DrawHangman {
-
     public void drawHangman(int lives) {
         if (lives == 7) {
             System.out.println("  __________..________      ");
@@ -164,4 +163,4 @@ public class DrawHangman {
             }
         }
     }
-
+}
