@@ -8,22 +8,29 @@ public class Main {
         String easyList = "easywordlist.txt";
         String mediumList = "mediumwordlist.txt";
         String hardList = "hardwordlist.txt";
-        String wordList;
+        String wordList = "";
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please choose easy, medium, or hard (e/m/h): ");
-        String response = sc.nextLine();
-        if (Objects.equals(response, "e")) {                  //add validation to the choice
-            System.out.println("Easy list chosen.");
-            wordList = easyList;
-        } else if (Objects.equals(response, "m")) {
-            System.out.println("Medium list chosen.");
-            wordList = mediumList;
-        } else {
-            System.out.println("Hard list chosen.");
-            wordList = hardList;
+        boolean valid = true;
+        while (valid) {
+            System.out.println("Please choose easy, medium, or hard (e/m/h): ");
+            String response = sc.nextLine();
+            if (Objects.equals(response, "e")) {                  //add validation to the choice
+                System.out.println("Easy list chosen.");
+                wordList = easyList;
+                break;
+            } else if (Objects.equals(response, "m")) {
+                System.out.println("Medium list chosen.");
+                wordList = mediumList;
+                break;
+            } else if (Objects.equals(response, "h")) {
+                System.out.println("Hard list chosen.");
+                wordList = hardList;
+                break;
+            } else {
+                System.out.println("Invalid Selection");
+            }
         }
-
         WordBank wordBank = new WordBank(wordList);
         String word = wordBank.getRandomWord(wordList);
         word = word.toLowerCase();                               //changed to .toLowerCase for ease of testing
@@ -32,7 +39,7 @@ public class Main {
         //link above code into WordBank
         //new
         DrawHangman draw = new DrawHangman();
-        String wordToBeGuessed = word;                           //changed variable names to more accurate names
+        String wordToBeGuessed = word;
         char[] arrayOfWord = wordToBeGuessed.toCharArray();
 
         char[] completedWord = new char[arrayOfWord.length];
@@ -45,7 +52,7 @@ public class Main {
         int lives = 7;
         int counter;
         int addedLetters;
-        for (int k = 0; k < 100; k++) {                          //change to while loop
+        for (int k = 0; k < 100; k++) {
             System.out.println("Please enter your guess: ");
             char guess = sc.next().charAt(0);
             addedLetters = 0;
