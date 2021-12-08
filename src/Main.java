@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -8,11 +9,10 @@ public class Main {
         String easyList = "easywordlist.txt";
         String mediumList = "mediumwordlist.txt";
         String hardList = "hardwordlist.txt";
-        String wordList = "";
+        String wordList;
 
         Scanner sc = new Scanner(System.in);
-        boolean valid = true;
-        while (valid) {
+        while (true) {
             System.out.println("Please choose easy, medium, or hard (e/m/h): ");
             String response = sc.nextLine();
             if (Objects.equals(response, "e")) {                  //add validation to the choice
@@ -43,9 +43,7 @@ public class Main {
         char[] arrayOfWord = wordToBeGuessed.toCharArray();
 
         char[] completedWord = new char[arrayOfWord.length];
-        for (int j = 0; j < completedWord.length; j++) {
-            completedWord[j] = '_';
-        }
+        Arrays.fill(completedWord, '_');
         System.out.println("The word is " + completedWord.length + " letters long");
         System.out.println(completedWord);
         System.out.println();
@@ -70,15 +68,13 @@ public class Main {
                 if (lives == 0) {
                     System.out.println();
                     System.out.print("The word was: " );
-                    for (int w = 0; w < arrayOfWord.length; w++)
-                        System.out.print(arrayOfWord[w]);
+                    for (char c : arrayOfWord) System.out.print(c);
                     System.out.println();
                     break;
                 }
             }
             System.out.println();
-            for (int h = 0; h < (completedWord.length); h++)
-                System.out.print(completedWord[h]);
+            for (char c : completedWord) System.out.print(c);
             System.out.println();
 
             for (int r = 0; r < arrayOfWord.length; r++) {            // checking if theres any blanks left
