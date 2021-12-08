@@ -12,7 +12,5 @@ public class Main {
         String word = wordBank.getRandomWord(wordList);
         word = word.toLowerCase();
         game.playGame(word);
-
-
     }
 }
