@@ -1,13 +1,23 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
 public class WordBank {
-    private String wordList;
+    String easyList = "easywordlist.txt";
+    String mediumList = "mediumwordlist.txt";
+    String hardList = "hardwordlist.txt";
+    String wordList;
 
 
-    public WordBank(String wordList) {
+    public WordBank() {
+    }
+
+    public WordBank(String easyList, String mediumList, String hardList, String wordList) {
+        this.easyList = easyList;
+        this.mediumList = mediumList;
+        this.hardList = hardList;
         this.wordList = wordList;
     }
 
@@ -33,5 +43,29 @@ public class WordBank {
         }
         sc.close();
         return result;
+    }
+
+    String chooseList() {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.println("Please choose easy, medium, or hard (e/m/h): ");
+            String response = sc.nextLine();
+            if (Objects.equals(response, "e")) {
+                System.out.println("Easy list chosen.");
+                wordList = easyList;
+                break;
+            } else if (Objects.equals(response, "m")) {
+                System.out.println("Medium list chosen.");
+                wordList = mediumList;
+                break;
+            } else if (Objects.equals(response, "h")) {
+                System.out.println("Hard list chosen.");
+                wordList = hardList;
+                break;
+            } else {
+                System.out.println("Invalid Selection");
+            }
+        }
+        return wordList;
     }
 }
