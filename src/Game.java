@@ -1,11 +1,21 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Run game
+ */
 public class Game {
 
+    /**
+     * Import Game class
+     */
     public Game() {
     }
 
+    /**
+     * Play game
+     * @param word word to play game with
+     */
     void playGame(String word) {
         Scanner sc = new Scanner(System.in);
         DrawHangman draw = new DrawHangman();
