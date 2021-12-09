@@ -8,6 +8,7 @@ public class DrawHangman {
      */
     public void drawHangman(int lives) {
         if (lives == 7) {
+            System.out.println();
             System.out.println("  __________..________      ");
             System.out.println("  | |________))______|                 ");
             System.out.println("  | |/ /                     ");
@@ -31,6 +32,7 @@ public class DrawHangman {
             System.out.println("Lives left: 6");
             }
         else if (lives == 6) {
+            System.out.println();
             System.out.println("  __________..________      ");
             System.out.println("  | |________))______|                 ");
             System.out.println("  | |/ /     ||          ");
@@ -54,6 +56,7 @@ public class DrawHangman {
             System.out.println("Lives left: 5");
             }
         else if (lives == 5) {
+            System.out.println();
             System.out.println("  __________..________      ");
             System.out.println("  | |________))______|                 ");
             System.out.println("  | |/ /     ||          ");
@@ -77,6 +80,7 @@ public class DrawHangman {
             System.out.println("Lives left: 4");
             }
         else if (lives == 4) {
+            System.out.println();
             System.out.println("  __________..________      ");
             System.out.println("  | |________))______|                 ");
             System.out.println("  | |/ /     ||          ");
@@ -100,6 +104,7 @@ public class DrawHangman {
             System.out.println("Lives left: 3");
             }
         else if (lives == 3) {
+            System.out.println();
             System.out.println("  __________..________      ");
             System.out.println("  | |________))______|                 ");
             System.out.println("  | |/ /     ||          ");
@@ -123,6 +128,7 @@ public class DrawHangman {
             System.out.println("Lives left: 2");
             }
         else if (lives == 2) {
+            System.out.println();
             System.out.println("  __________..________      ");
             System.out.println("  | |________))______|                 ");
             System.out.println("  | |/ /     ||          ");
@@ -146,6 +152,7 @@ public class DrawHangman {
             System.out.println("Lives left: 1");
             }
         else if (lives == 1) {
+            System.out.println();
             System.out.println("  __________..________      ");
             System.out.println("  | |________))______|                 ");
             System.out.println("  | |/ /     ||          ");
