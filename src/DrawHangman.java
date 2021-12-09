@@ -1,4 +1,11 @@
+/**
+ *  Draw the hangman
+ */
 public class DrawHangman {
+    /**
+     * Draw hangman based on remaining lives
+     * @param lives number of lives remaining
+     */
     public void drawHangman(int lives) {
         if (lives == 7) {
             System.out.println("  __________..________      ");
