@@ -4,6 +4,9 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ *  Work with the word bank.
+ */
 public class WordBank {
     String easyList = "easywordlist.txt";
     String mediumList = "mediumwordlist.txt";
@@ -11,24 +14,18 @@ public class WordBank {
     String wordList;
 
 
+    /**
+     * Import word bank
+     */
     public WordBank() {
     }
 
-    public WordBank(String easyList, String mediumList, String hardList, String wordList) {
-        this.easyList = easyList;
-        this.mediumList = mediumList;
-        this.hardList = hardList;
-        this.wordList = wordList;
-    }
-
-    public String getWordList() {
-        return wordList;
-    }
-
-    public void setWordList(String wordList) {
-        this.wordList = wordList;
-    }
-
+    /**
+     * Generates random word
+     * @param wordList specified word list
+     * @return returns random word from chosen word list
+     * @throws FileNotFoundException displays error is file is not found
+     */
     public String getRandomWord(String wordList) throws FileNotFoundException {
         File f = new File(wordList);
         String result = null;
@@ -45,6 +42,10 @@ public class WordBank {
         return result;
     }
 
+    /**
+     * Receive user input to choose word list
+     * @return chosen word list
+     */
     String chooseList() {
         Scanner sc = new Scanner(System.in);
         while (true) {
