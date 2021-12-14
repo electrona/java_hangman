@@ -41,19 +41,6 @@ public class Game {
         return sc.next().charAt(0);
     }
 
-    /**
-     * Check if guess is correct
-     * @param arrayOfWord game word
-     * @param completedWord completed word
-     * @param i position of guess
-     * @param guess guess
-     * @param addedLetters count of added letters
-     */
-    void checkGuess(char[] arrayOfWord, char[] completedWord, int i, char guess, int addedLetters) {
-        if (arrayOfWord[i] == guess) {
-            completedWord[i] = guess;
-        }
-    }
 
     /**
      * Show word in play
@@ -66,28 +53,10 @@ public class Game {
             System.out.print("The word was: ");
             for (char c : arrayOfWord) System.out.print(c);
             System.out.println();
-            break;
+            //break;
         }
     }
 
-    /**
-     * Check if game is won
-     * @param arrayOfWord game word
-     * @param completedWord completed word
-     */
-    void checkWin(char[] arrayOfWord, char[] completedWord) {
-        int counter = 0;
-        for (int r = 0; r < arrayOfWord.length; r++) {
-            if (completedWord[r] != '_') {
-                counter++;
-            }
-        }
-        if (counter == arrayOfWord.length) {
-            System.out.println("You Win!!");
-            break;
-        }
-        System.out.println();
-    }
 
     /**
      * Play game
@@ -100,23 +69,37 @@ public class Game {
         displayWordLength(completedWord);
         displayBlankWord(completedWord);
         int lives = 7;
-        int addedLetters = 0;
         for (int k = 0; k < 100; k++) {
             char guess = enterGuess();
+            int addedLetters = 0;
             for (int i = 0; i <= (arrayOfWord.length - 1); i++) {
-               checkGuess(arrayOfWord, completedWord, i, guess, addedLetters);
-               addedLetters = addedLetters + 1;
+                if (arrayOfWord[i] == guess) {
+                    completedWord[i] = guess;
+                    addedLetters++;
+                }
             }
             if (addedLetters == 0) {
                 draw.drawHangman(lives);
                 lives--;
-                displayGameWord(lives, completedWord);
+                displayGameWord(lives, arrayOfWord);
+                if (lives == 0) {
+                    break;
+                }
             }
             System.out.println();
             for (char c : completedWord) System.out.print(c);
             System.out.println();
-
-            checkWin(arrayOfWord, completedWord);
+            int counter = 0;
+            for (int r = 0; r < arrayOfWord.length; r++) {
+                if (completedWord[r] != '_') {
+                    counter++;
+                }
+            }
+            if (counter == arrayOfWord.length) {
+                System.out.println("You Win!!");
+                break;
+            }
+            System.out.println();
         }
     }
 
